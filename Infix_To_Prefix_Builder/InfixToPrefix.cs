@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
-namespace MLTA_2_5
+namespace Infix_To_Prefix_Builder
 {
     /// <summary>
     /// Преобразование инфиксной нотации в префиксную
@@ -9,14 +9,15 @@ namespace MLTA_2_5
     internal class InfixToPrefix
     {
         private readonly string infixNotation;
+
         public InfixToPrefix(string infixNotation)
         {
             this.infixNotation = infixNotation;
         }
+
         /// <summary>
         /// Преобразование инфиксной нотации в префиксную
         /// </summary>
-        /// <returns>Результат преобразования</returns>
         public string Run()
         {
             switch (CheckInfix(infixNotation))
@@ -121,11 +122,11 @@ namespace MLTA_2_5
                 return "";
             }
         }
+
         /// <summary>
         /// Приоритет операции
         /// </summary>
         /// <param name="operation">Операция</param>
-        /// <returns>Приоритет</returns>
         private static int Priority(char operation)
         {
             switch (operation)
@@ -142,11 +143,11 @@ namespace MLTA_2_5
                     return 0;
             }
         }
+
         /// <summary>
         /// Проверка на правильность написания инфиксной нотации
         /// </summary>
         /// <param name="infixNotation">Инфиксная запись</param>
-        /// <returns>Булевое значение</returns>
         public static bool CheckInfix(string infixNotation)
         {
             char[] operators = { '(', ')', '⋁', '⋀', '→', '↔', '¬', '⊕' };

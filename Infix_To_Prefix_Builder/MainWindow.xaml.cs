@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-namespace MLTA_2_5
+namespace Infix_To_Prefix_Builder
 {
     public partial class MainWindow : Window
     {
@@ -8,6 +8,7 @@ namespace MLTA_2_5
         {
             InitializeComponent();
         }
+
         /// <summary>
         /// Нажатие кнопок на панели
         /// </summary>
@@ -33,6 +34,7 @@ namespace MLTA_2_5
                     return;
             }
         }
+        
         /// <summary>
         /// Подтверждение
         /// </summary>
